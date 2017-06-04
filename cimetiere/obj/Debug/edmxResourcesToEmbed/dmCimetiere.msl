@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bddcimeModelStoreContainer" CdmEntityContainer="CimEntities">
+    <EntitySetMapping Name="Beneficiaires">
+      <EntityTypeMapping TypeName="bddcimeModel.Beneficiaire">
+        <MappingFragment StoreEntitySet="beneficiaires">
+          <ScalarProperty Name="Id" ColumnName="ben_id" />
+          <ScalarProperty Name="Nom" ColumnName="ben_nom" />
+          <ScalarProperty Name="Prenom" ColumnName="ben_prenom" />
+          <ScalarProperty Name="DateNaiss" ColumnName="ben_date_naiss" />
+          <ScalarProperty Name="LienParente" ColumnName="ben_lien_parente" />
+          <ScalarProperty Name="Adresse" ColumnName="ben_adresse" />
+          <ScalarProperty Name="LocVilleId" ColumnName="locville_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Concessionnaires">
+      <EntityTypeMapping TypeName="bddcimeModel.Concessionnaire">
+        <MappingFragment StoreEntitySet="concessionnaires">
+          <ScalarProperty Name="Id" ColumnName="csnr_id" />
+          <ScalarProperty Name="Nom" ColumnName="csnr_nom" />
+          <ScalarProperty Name="Prenom" ColumnName="csnr_prenom" />
+          <ScalarProperty Name="DateNaiss" ColumnName="csnr_date_naiss" />
+          <ScalarProperty Name="Adresse" ColumnName="csnr_adresse" />
+          <ScalarProperty Name="NoRegistre" ColumnName="csnr_no_registre" />
+          <ScalarProperty Name="Tel" ColumnName="csnr_tel" />
+          <ScalarProperty Name="LocVilleId" ColumnName="locville_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Concessions">
+      <EntityTypeMapping TypeName="bddcimeModel.Concession">
+        <MappingFragment StoreEntitySet="concessions">
+          <ScalarProperty Name="Id" ColumnName="con_id" />
+          <ScalarProperty Name="Numero" ColumnName="con_numero" />
+          <ScalarProperty Name="DateDebut" ColumnName="con_date_debut" />
+          <ScalarProperty Name="DateFin" ColumnName="con_date_fin" />
+          <ScalarProperty Name="NbreRenovations" ColumnName="con_nbre_renovations" />
+          <ScalarProperty Name="MontantPaye" ColumnName="con_montant_paye" />
+          <ScalarProperty Name="EmplId" ColumnName="empl_id" />
+          <ScalarProperty Name="CsnrId" ColumnName="csnr_id" />
+          <ScalarProperty Name="ComId" ColumnName="com_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Defunts">
+      <EntityTypeMapping TypeName="bddcimeModel.Defunt">
+        <MappingFragment StoreEntitySet="defunts">
+          <ScalarProperty Name="Id" ColumnName="def_id" />
+          <ScalarProperty Name="NumeroLh" ColumnName="def_numero_lh" />
+          <ScalarProperty Name="NumeroAnnee" ColumnName="def_numero_annee" />
+          <ScalarProperty Name="Prenom" ColumnName="def_prenom" />
+          <ScalarProperty Name="Nom" ColumnName="def_nom" />
+          <ScalarProperty Name="Adresse" ColumnName="def_adresse" />
+          <ScalarProperty Name="EtatCivil" ColumnName="def_etat_civil" />
+          <ScalarProperty Name="EtatCivilDe" ColumnName="def_etat_civil_de" />
+          <ScalarProperty Name="DateNaiss" ColumnName="def_date_naiss" />
+          <ScalarProperty Name="LieuNaiss" ColumnName="def_lieu_naiss" />
+          <ScalarProperty Name="DateDeces" ColumnName="def_date_deces" />
+          <ScalarProperty Name="LieuDeces" ColumnName="def_lieu_deces" />
+          <ScalarProperty Name="PcId" ColumnName="pc_id" />
+          <ScalarProperty Name="DateDebut" ColumnName="Date_debut" />
+          <ScalarProperty Name="DateFin" ColumnName="Date_fin" />
+          <ScalarProperty Name="EmplId" ColumnName="empl_id" />
+          <ScalarProperty Name="LocVilleId" ColumnName="locville_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emplacements">
+      <EntityTypeMapping TypeName="bddcimeModel.Emplacement">
+        <MappingFragment StoreEntitySet="emplacements">
+          <ScalarProperty Name="HistId" ColumnName="hist_id" />
+          <ScalarProperty Name="Id" ColumnName="empl_id" />
+          <ScalarProperty Name="Reference" ColumnName="empl_reference" />
+          <ScalarProperty Name="Type" ColumnName="empl_type" />
+          <ScalarProperty Name="NbPlaces" ColumnName="empl_nb_places" />
+          <ScalarProperty Name="MonumClasse" ColumnName="empl_monum_classe" />
+          <ScalarProperty Name="Coordonnees" ColumnName="empl_coords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonnesContact">
+      <EntityTypeMapping TypeName="bddcimeModel.PersonneContact">
+        <MappingFragment StoreEntitySet="personnes_contact">
+          <ScalarProperty Name="Id" ColumnName="pc_id" />
+          <ScalarProperty Name="Nom" ColumnName="pc_nom" />
+          <ScalarProperty Name="Prenom" ColumnName="pc_prenom" />
+          <ScalarProperty Name="Tel" ColumnName="pc_tel" />
+          <ScalarProperty Name="Adresse" ColumnName="pc_adresse" />
+          <ScalarProperty Name="LocVilleId" ColumnName="locville_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commentaires">
+      <EntityTypeMapping TypeName="bddcimeModel.Commentaire">
+        <MappingFragment StoreEntitySet="t_commentaire">
+          <ScalarProperty Name="Id" ColumnName="com_id" />
+          <ScalarProperty Name="Texte" ColumnName="com_commentaire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Histoires">
+      <EntityTypeMapping TypeName="bddcimeModel.Histoire">
+        <MappingFragment StoreEntitySet="t_histoire">
+          <ScalarProperty Name="Id" ColumnName="h_id" />
+          <ScalarProperty Name="Texte" ColumnName="h_histoire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocVilles">
+      <EntityTypeMapping TypeName="bddcimeModel.LocVille">
+        <MappingFragment StoreEntitySet="t_loc_ville">
+          <ScalarProperty Name="Id" ColumnName="locville_id" />
+          <ScalarProperty Name="Cp" ColumnName="locville_cp" />
+          <ScalarProperty Name="Ville" ColumnName="locville_ville" />
+          <ScalarProperty Name="PaysId" ColumnName="Pays_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pays">
+      <EntityTypeMapping TypeName="bddcimeModel.Pays">
+        <MappingFragment StoreEntitySet="t_pays">
+          <ScalarProperty Name="Id" ColumnName="Pays_id" />
+          <ScalarProperty Name="Nom" ColumnName="Pays_nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="beneficier" TypeName="bddcimeModel.beneficier" StoreEntitySet="beneficier">
+      <EndProperty Name="beneficiaires">
+        <ScalarProperty Name="Id" ColumnName="ben_id" />
+      </EndProperty>
+      <EndProperty Name="concessions">
+        <ScalarProperty Name="Id" ColumnName="con_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
