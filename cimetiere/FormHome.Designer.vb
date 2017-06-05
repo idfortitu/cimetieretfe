@@ -30,11 +30,11 @@ Partial Class FormHome
         Me.BtConstatAbandon = New System.Windows.Forms.Button()
         Me.BtConsulterDonnées = New System.Windows.Forms.Button()
         Me.PanNotifs = New System.Windows.Forms.Panel()
+        Me.BtNotifsMontrer = New System.Windows.Forms.Button()
         Me.BtNotifsMasquer = New System.Windows.Forms.Button()
         Me.LabNotifs = New System.Windows.Forms.Label()
         Me.LabWelkom = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtNotifsMontrer = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.PanNotifs.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,11 +95,12 @@ Partial Class FormHome
         Me.BtConstatAbandon.BackColor = System.Drawing.Color.SeaGreen
         Me.BtConstatAbandon.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.BtConstatAbandon.ForeColor = System.Drawing.Color.Transparent
-        Me.BtConstatAbandon.Location = New System.Drawing.Point(3, 113)
+        Me.BtConstatAbandon.Location = New System.Drawing.Point(90, 113)
+        Me.BtConstatAbandon.Margin = New System.Windows.Forms.Padding(90, 3, 3, 3)
         Me.BtConstatAbandon.Name = "BtConstatAbandon"
         Me.BtConstatAbandon.Size = New System.Drawing.Size(209, 104)
         Me.BtConstatAbandon.TabIndex = 3
-        Me.BtConstatAbandon.Text = "Constat d'abandon"
+        Me.BtConstatAbandon.Text = "Accéder au Plan"
         Me.BtConstatAbandon.UseVisualStyleBackColor = False
         '
         'BtConsulterDonnées
@@ -107,7 +108,8 @@ Partial Class FormHome
         Me.BtConsulterDonnées.BackColor = System.Drawing.Color.SeaGreen
         Me.BtConsulterDonnées.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.BtConsulterDonnées.ForeColor = System.Drawing.Color.Transparent
-        Me.BtConsulterDonnées.Location = New System.Drawing.Point(218, 113)
+        Me.BtConsulterDonnées.Location = New System.Drawing.Point(342, 113)
+        Me.BtConsulterDonnées.Margin = New System.Windows.Forms.Padding(40, 3, 3, 3)
         Me.BtConsulterDonnées.Name = "BtConsulterDonnées"
         Me.BtConsulterDonnées.Size = New System.Drawing.Size(209, 104)
         Me.BtConsulterDonnées.TabIndex = 4
@@ -124,6 +126,16 @@ Partial Class FormHome
         Me.PanNotifs.Name = "PanNotifs"
         Me.PanNotifs.Size = New System.Drawing.Size(776, 100)
         Me.PanNotifs.TabIndex = 68
+        '
+        'BtNotifsMontrer
+        '
+        Me.BtNotifsMontrer.Location = New System.Drawing.Point(695, 74)
+        Me.BtNotifsMontrer.Name = "BtNotifsMontrer"
+        Me.BtNotifsMontrer.Size = New System.Drawing.Size(73, 23)
+        Me.BtNotifsMontrer.TabIndex = 6
+        Me.BtNotifsMontrer.Text = "Notifications"
+        Me.BtNotifsMontrer.UseVisualStyleBackColor = True
+        Me.BtNotifsMontrer.Visible = False
         '
         'BtNotifsMasquer
         '
@@ -167,29 +179,24 @@ Partial Class FormHome
         Me.PictureBox1.TabIndex = 70
         Me.PictureBox1.TabStop = False
         '
-        'BtNotifsMontrer
-        '
-        Me.BtNotifsMontrer.Location = New System.Drawing.Point(695, 74)
-        Me.BtNotifsMontrer.Name = "BtNotifsMontrer"
-        Me.BtNotifsMontrer.Size = New System.Drawing.Size(73, 23)
-        Me.BtNotifsMontrer.TabIndex = 6
-        Me.BtNotifsMontrer.Text = "Notifications"
-        Me.BtNotifsMontrer.UseVisualStyleBackColor = True
-        Me.BtNotifsMontrer.Visible = False
-        '
         'FormHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.cimetiere.My.Resources.Resources.home3
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(769, 508)
+        Me.ClientSize = New System.Drawing.Size(769, 504)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.PanNotifs)
         Me.Controls.Add(Me.LabWelkom)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximumSize = New System.Drawing.Size(785, 543)
+        Me.MinimumSize = New System.Drawing.Size(785, 543)
         Me.Name = "FormHome"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.PanNotifs.ResumeLayout(False)

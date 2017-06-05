@@ -9,6 +9,10 @@
         End If
     End Sub
 
+    Private Sub BtQuitter_Click(sender As Object, e As EventArgs) Handles BtQuitter.Click
+        Me.Close()
+    End Sub
+
     ' Private Sub Button1_Click(sender As Object, e As EventArgs)
     'Dim form As New debug
     '   debug.ShowDialog()
