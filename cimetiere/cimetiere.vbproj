@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bdd.vb" />
     <Compile Include="Beneficiaire.partial.vb" />
     <Compile Include="Beneficiaire.vb">
       <DependentUpon>dmCimetiere.tt</DependentUpon>

@@ -569,9 +569,9 @@ Partial Class FormNouvelleConcession
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel3.Location = New System.Drawing.Point(575, 220)
+        Me.Panel3.Location = New System.Drawing.Point(569, 220)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(490, 171)
+        Me.Panel3.Size = New System.Drawing.Size(496, 171)
         Me.Panel3.TabIndex = 138
         '
         'FormNouvelleConcession
