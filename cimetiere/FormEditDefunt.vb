@@ -123,11 +123,11 @@
         If f.ShowDialog = DialogResult.OK Then
             Using ctx As New CimEntities
                 Dim IdVilleSelect As Integer = If(LbVille.SelectedItem IsNot Nothing, LbVille.SelectedItem.Id, -1)
-                Dim IdNouveauPays As Integer = f.PaysFait.Id      ' le contexte qui a chargé ces objets était différent, donc on ne peut pas compter sur les références d'objet pour reconnaître les entités
+                'Dim IdNouveauPays As Integer = f.PaysFait.Id      ' le contexte qui a chargé ces objets était différent, donc on ne peut pas compter sur les références d'objet pour reconnaître les entités
                 ChargerListboxLocVille(ctx)
                 ChargerListboxPays(ctx)
                 LbVille.SelectedValue = IdVilleSelect
-                LbPays.SelectedValue = IdNouveauPays
+                'LbPays.SelectedValue = IdNouveauPays
             End Using
         End If
     End Sub

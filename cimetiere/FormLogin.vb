@@ -10,9 +10,9 @@ Public Class FormLogin
             Dim UniEnc As New System.Text.UnicodeEncoding
             Dim bitPass() As Byte = UniEnc.GetBytes(TbMdp.Text)
             Dim pass As String = Convert.ToBase64String(mMD5.ComputeHash(bitPass)).ToString
-            MsgBox(pass)
-            MsgBox(TbNomUtilisateur.Text)
-            Dim a = Bdd.Connexion(TbNomUtilisateur.Text, pass).ToString
+            'MsgBox(pass)
+            'MsgBox(TbNomUtilisateur.Text)
+            Dim a = Bdd.Login(TbNomUtilisateur.Text, pass)
             DialogResult = DialogResult.OK
         Catch ex As Exception
             MsgBox("Le nom d'utilisateur ou le mot de passe est incorrecte.")
@@ -22,6 +22,11 @@ Public Class FormLogin
 
 
 
+    End Sub
+
+    Sub osef() Handles Me.Load
+        Dim u = Bdd.GetTable("t_loc_ville")
+        Bdd.Insert("t_loc_ville", u.Rows(0))
     End Sub
 
     Private Sub BtQuitter_Click(sender As Object, e As EventArgs) Handles BtQuitter.Click

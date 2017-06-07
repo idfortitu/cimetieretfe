@@ -15,7 +15,6 @@
     End Sub
 
 
-
     Private Sub FormNouvelleVille_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Using ctx As New CimEntities
             ChargerComboboxPays(ctx)
@@ -29,7 +28,7 @@
         f.ShowDialog()
         If f.PaysFait IsNot Nothing Then
             Using ctx As New CimEntities
-                ChargerComboboxPays(ctx, f.PaysFait)
+                'ChargerComboboxPays(ctx, f.PaysFait)
             End Using
         End If
     End Sub

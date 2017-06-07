@@ -166,14 +166,6 @@
     <Compile Include="Emplacement.vb">
       <DependentUpon>dmCimetiere.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entites.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entites.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Entites.vb">
-      <DependentUpon>Entites.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormEditEmplacement.Designer.vb">
       <DependentUpon>FormEditEmplacement.vb</DependentUpon>
     </Compile>
@@ -393,17 +385,6 @@
     </EntityDeploy>
     <None Include="dmCimetiere.edmx.diagram">
       <DependentUpon>dmCimetiere.edmx</DependentUpon>
-    </None>
-    <None Include="Entites.xsc">
-      <DependentUpon>Entites.xsd</DependentUpon>
-    </None>
-    <None Include="Entites.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Entites.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="Entites.xss">
-      <DependentUpon>Entites.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
