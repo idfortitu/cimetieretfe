@@ -4,24 +4,21 @@
             ChargerComboboxEmpl(ctx)
         End Using
 
-        TbdateDateDebut.DateValue = Today
     End Sub
 
-    Private Sub BtDebutPlus15Ans_Click(sender As Object, e As EventArgs) Handles BtDebutPlus15Ans.Click
-        If TbdateDateDebut.DateEstValide Then TbdateDateFin.DateValue = DateAdd(DateInterval.Year, 15, TbdateDateDebut.DateValue.Value)
+    Private Sub BtDebutPlus15Ans_Click(sender As Object, e As EventArgs)
+
     End Sub
 
-    Private Sub BtDebutPlus30Ans_Click(sender As Object, e As EventArgs) Handles BtDebutPlus30Ans.Click
-        If TbdateDateDebut.DateEstValide Then TbdateDateFin.DateValue = DateAdd(DateInterval.Year, 30, TbdateDateDebut.DateValue.Value)
+    Private Sub BtDebutPlus30Ans_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub ChargerComboboxEmpl(contexte As CimEntities)
         Dim ListeEmpls As New List(Of Emplacement)({New Emplacement With {.Id = -1, .Reference = ""}})      ' choix élément vide (qui ne sera pas accepté par le formulaire)
         ListeEmpls = ListeEmpls.Concat(From e In contexte.Emplacements Order By e.Reference).ToList
 
-        CbEmplacement.DisplayMember = "Reference"
-        CbEmplacement.ValueMember = "Id"
-        CbEmplacement.DataSource = ListeEmpls
+
     End Sub
 
     Private Sub BtEnregistrer_Click(sender As Object, e As EventArgs) Handles BtEnregistrer.Click
@@ -39,11 +36,10 @@
         If ErrorProvider1.GetError(TbCsnrNom) = "" _
             AndAlso ErrorProvider1.GetError(TbCsnrPrenom) = "" _
             AndAlso ErrorProvider1.GetError(TbdateCsnrDateNaiss) = "" _
-            AndAlso ErrorProvider1.GetError(TbdateDateDebut) = "" _
-            AndAlso ErrorProvider1.GetError(TbdateDateFin) = "" _
             AndAlso ErrorProvider1.GetError(TbfloatMontantPaye) = "" _
-            AndAlso ErrorProvider1.GetError(TbCsnrNoRegistre) = "" _
-            AndAlso ErrorProvider1.GetError(CbEmplacement) = "" Then
+            AndAlso ErrorProvider1.GetError(TbCsnrNoRegistre) = "" Then
+
+
 
             MessageBox.Show("trankil sa passe")
 
@@ -102,10 +98,9 @@
 
                 ' concession
                 Dim LaConcession As New Concession
-                LaConcession.DateDebut = TbdateDateDebut.DateValue
-                LaConcession.DateFin = TbdateDateFin.DateValue
+
                 LaConcession.MontantPaye = Convert.ToDecimal(TbfloatMontantPaye.Text)
-                LaConcession.EmplId = CbEmplacement.SelectedValue
+
 
                 If TbCommentaire.Text.Trim <> "" Then LaConcession.Commentaire = New Commentaire(TbCommentaire.Text.Trim)
 
@@ -159,20 +154,12 @@
         End If
     End Sub
 
-    Private Sub TbdateDateDebut_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TbdateDateDebut.Validating
-        If TbdateDateDebut.DateValue Is Nothing OrElse Not TbdateDateDebut.DateEstValide Then
-            ErrorProvider1.SetError(TbdateDateDebut, "La date est incorrecte")
-        Else
-            ErrorProvider1.SetError(TbdateDateDebut, "")
-        End If
+    Private Sub TbdateDateDebut_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
     End Sub
 
-    Private Sub TbdateDateFin_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TbdateDateFin.Validating
-        If TbdateDateFin.DateValue Is Nothing OrElse Not TbdateDateFin.DateEstValide Then
-            ErrorProvider1.SetError(TbdateDateFin, "La date est incorrecte")
-        Else
-            ErrorProvider1.SetError(TbdateDateFin, "")
-        End If
+    Private Sub TbdateDateFin_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
     End Sub
 
     Private Sub TbfloatMontantPaye_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TbfloatMontantPaye.Validating
@@ -184,11 +171,15 @@
     End Sub
 
 
-    Private Sub CbEmplacement_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles CbEmplacement.Validating
-        If CbEmplacement.SelectedValue = -1 Then
-            ErrorProvider1.SetError(CbEmplacement, "Vous devez indiquer l'emplacement")
-        Else
-            ErrorProvider1.SetError(CbEmplacement, "")
-        End If
+    Private Sub CbEmplacement_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
+    End Sub
+
+    Private Sub BtAnnuler_Click(sender As Object, e As EventArgs) Handles BtAnnuler.Click
+        Me.Close()
+    End Sub
+
+    Private Sub GbLocation_Enter(sender As Object, e As EventArgs) 
+
     End Sub
 End Class

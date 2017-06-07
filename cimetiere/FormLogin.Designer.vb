@@ -133,8 +133,15 @@ Partial Class FormLogin
         Me.Controls.Add(Me.LabMdp)
         Me.Controls.Add(Me.LabNomUtilisateur)
         Me.Controls.Add(Me.LogoPictureBox)
+<<<<<<< HEAD
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+=======
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+>>>>>>> origin/master
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
