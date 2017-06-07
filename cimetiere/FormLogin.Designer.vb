@@ -30,6 +30,7 @@ Partial Class FormLogin
         Me.LabMdp = New System.Windows.Forms.Label()
         Me.LabNomUtilisateur = New System.Windows.Forms.Label()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,9 +38,10 @@ Partial Class FormLogin
         '
         Me.BtQuitter.BackColor = System.Drawing.Color.Gainsboro
         Me.BtQuitter.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.BtQuitter.Location = New System.Drawing.Point(362, 122)
+        Me.BtQuitter.Location = New System.Drawing.Point(483, 150)
+        Me.BtQuitter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtQuitter.Name = "BtQuitter"
-        Me.BtQuitter.Size = New System.Drawing.Size(94, 23)
+        Me.BtQuitter.Size = New System.Drawing.Size(125, 28)
         Me.BtQuitter.TabIndex = 21
         Me.BtQuitter.Text = "&Quitter"
         Me.BtQuitter.UseVisualStyleBackColor = False
@@ -47,9 +49,10 @@ Partial Class FormLogin
         'BtOk
         '
         Me.BtOk.BackColor = System.Drawing.Color.Gainsboro
-        Me.BtOk.Location = New System.Drawing.Point(259, 122)
+        Me.BtOk.Location = New System.Drawing.Point(345, 150)
+        Me.BtOk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtOk.Name = "BtOk"
-        Me.BtOk.Size = New System.Drawing.Size(94, 23)
+        Me.BtOk.Size = New System.Drawing.Size(125, 28)
         Me.BtOk.TabIndex = 20
         Me.BtOk.Text = "&OK"
         Me.BtOk.UseVisualStyleBackColor = False
@@ -57,25 +60,28 @@ Partial Class FormLogin
         'TbMdp
         '
         Me.TbMdp.BackColor = System.Drawing.SystemColors.Window
-        Me.TbMdp.Location = New System.Drawing.Point(252, 91)
+        Me.TbMdp.Location = New System.Drawing.Point(336, 112)
+        Me.TbMdp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TbMdp.Name = "TbMdp"
         Me.TbMdp.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TbMdp.Size = New System.Drawing.Size(220, 20)
+        Me.TbMdp.Size = New System.Drawing.Size(292, 22)
         Me.TbMdp.TabIndex = 19
         '
         'TbNomUtilisateur
         '
-        Me.TbNomUtilisateur.Location = New System.Drawing.Point(252, 34)
+        Me.TbNomUtilisateur.Location = New System.Drawing.Point(336, 42)
+        Me.TbNomUtilisateur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TbNomUtilisateur.Name = "TbNomUtilisateur"
-        Me.TbNomUtilisateur.Size = New System.Drawing.Size(220, 20)
+        Me.TbNomUtilisateur.Size = New System.Drawing.Size(292, 22)
         Me.TbNomUtilisateur.TabIndex = 17
         '
         'LabMdp
         '
         Me.LabMdp.BackColor = System.Drawing.Color.Transparent
-        Me.LabMdp.Location = New System.Drawing.Point(250, 69)
+        Me.LabMdp.Location = New System.Drawing.Point(333, 85)
+        Me.LabMdp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabMdp.Name = "LabMdp"
-        Me.LabMdp.Size = New System.Drawing.Size(220, 23)
+        Me.LabMdp.Size = New System.Drawing.Size(293, 28)
         Me.LabMdp.TabIndex = 18
         Me.LabMdp.Text = "&Mot de passe"
         Me.LabMdp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -83,9 +89,10 @@ Partial Class FormLogin
         'LabNomUtilisateur
         '
         Me.LabNomUtilisateur.BackColor = System.Drawing.Color.Transparent
-        Me.LabNomUtilisateur.Location = New System.Drawing.Point(250, 12)
+        Me.LabNomUtilisateur.Location = New System.Drawing.Point(333, 15)
+        Me.LabNomUtilisateur.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabNomUtilisateur.Name = "LabNomUtilisateur"
-        Me.LabNomUtilisateur.Size = New System.Drawing.Size(220, 23)
+        Me.LabNomUtilisateur.Size = New System.Drawing.Size(293, 28)
         Me.LabNomUtilisateur.TabIndex = 15
         Me.LabNomUtilisateur.Text = "Nom d'utilisateur"
         Me.LabNomUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -94,20 +101,31 @@ Partial Class FormLogin
         '
         Me.LogoPictureBox.BackColor = System.Drawing.Color.Transparent
         Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(7, 7)
+        Me.LogoPictureBox.Location = New System.Drawing.Point(9, 9)
+        Me.LogoPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(237, 154)
+        Me.LogoPictureBox.Size = New System.Drawing.Size(316, 190)
         Me.LogoPictureBox.TabIndex = 16
         Me.LogoPictureBox.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(535, 187)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "debug"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormLogin
         '
         Me.AcceptButton = Me.BtOk
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.cimetiere.My.Resources.Resources.fondformulaire
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(507, 173)
+        Me.ClientSize = New System.Drawing.Size(676, 213)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtQuitter)
         Me.Controls.Add(Me.BtOk)
         Me.Controls.Add(Me.TbMdp)
@@ -115,7 +133,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.LabMdp)
         Me.Controls.Add(Me.LabNomUtilisateur)
         Me.Controls.Add(Me.LogoPictureBox)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormLogin"
         Me.Text = "FormLogin"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -130,4 +148,5 @@ Partial Class FormLogin
     Friend WithEvents LabMdp As Label
     Friend WithEvents LabNomUtilisateur As Label
     Friend WithEvents LogoPictureBox As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

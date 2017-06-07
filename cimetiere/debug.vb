@@ -102,4 +102,13 @@ Public Class debug
 
     End Sub
 
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim ListeVilles = Bdd.GetTable_t_loc_ville("osef")
+        Dim a = ListeVilles.Rows(0)
+        'Entites.t
+        'Dim q = a.
+        'Dim a = "appa."
+        Dim krout = "a"
+
+    End Sub
 End Class

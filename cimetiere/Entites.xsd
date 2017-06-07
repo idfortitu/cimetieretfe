@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Entites" targetNamespace="http://tempuri.org/Entites.xsd" xmlns:mstns="http://tempuri.org/Entites.xsd" xmlns="http://tempuri.org/Entites.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="cimetiere2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cimetiere2ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.cimetiere.My.MySettings.GlobalReference.Default.cimetiere2ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_loc_villeTableAdapter" GeneratorDataComponentClassName="t_loc_villeTableAdapter" Name="t_loc_ville" UserDataComponentName="t_loc_villeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cimetiere2ConnectionString (MySettings)" DbObjectName="cimetiere2.t_loc_ville" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM t_loc_ville</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Entites" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Entites" msprop:Generator_UserDSName="Entites">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="t_loc_ville" msprop:Generator_TableClassName="t_loc_villeDataTable" msprop:Generator_TableVarName="tablet_loc_ville" msprop:Generator_TablePropName="t_loc_ville" msprop:Generator_RowDeletingName="t_loc_villeRowDeleting" msprop:Generator_RowChangingName="t_loc_villeRowChanging" msprop:Generator_RowEvHandlerName="t_loc_villeRowChangeEventHandler" msprop:Generator_RowDeletedName="t_loc_villeRowDeleted" msprop:Generator_UserTableName="t_loc_ville" msprop:Generator_RowChangedName="t_loc_villeRowChanged" msprop:Generator_RowEvArgName="t_loc_villeRowChangeEvent" msprop:Generator_RowClassName="t_loc_villeRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

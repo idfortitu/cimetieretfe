@@ -9,6 +9,11 @@
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim f = New debug
+        debug.ShowDialog()
+    End Sub
+
     ' Private Sub Button1_Click(sender As Object, e As EventArgs)
     'Dim form As New debug
     '   debug.ShowDialog()

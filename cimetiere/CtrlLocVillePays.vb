@@ -1,7 +1,8 @@
 ﻿Public Class CtrlLocVillePays
 
+
     ' <> -1 si la ville est choisie (auquel cas l'enregistrement LocVille existe)
-    ' -1 si aucune ville n'est choisie, auquel cas le locvile existe peut-être en tant que ville vide + pays sélectionné, ou pas et dans ce cas il faut le créer
+    ' -1 si aucune ville n'est choisie, auquel cas le locville existe peut-être en tant que ville vide + pays sélectionné, ou pas et dans ce cas il faut le créer
     Public ReadOnly Property LocVilleId As Integer
         Get
             Return CbLocVille.SelectedValue
@@ -64,8 +65,8 @@
 
 
 
-
     Private Sub ChargerComboboxLocVille(contexte As CimEntities)
+
         Dim ListeVilles As New List(Of LocVille)({New LocVille With {.Id = -1, .Ville = ""}})
         ListeVilles = ListeVilles.Concat(From v In contexte.LocVilles.Include("Pays") Where v.Ville <> "" Order By v.Ville).ToList     ' on charge aussi les pays pour pouvoir faire correspondre les éléments de la listbox des villes (Uneville.Pays) à ceux de la listbox des pays au changement de sélection de la ville
 
